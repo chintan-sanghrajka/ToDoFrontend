@@ -1,38 +1,173 @@
-.App {
-  text-align: center;
+.task_div{
+  border: solid 1px #006fc9;
+  padding: 20px;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.add_task_div{
+  width: 50%;
+  margin: 0 auto;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.add_task_label{
+  font-size: 25px;
+  margin-bottom: 10px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.add_task_input{
+  width: 100%;
+  margin-bottom: 20px;
+  height: 40px;
+  padding: 0 10px;
+  border-radius: 5px;
+  border: solid 1px #006fc9;
+  outline: none;
+}
+
+.error_msg{
+  color: #ff0000;
+}
+
+.title_main_div{
+  width: 100%;
   display: flex;
-  flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  background-color: #0d6efd;
+  color: #ffffff;
+  padding: 12px 0;
+  z-index: 100;
 }
 
-.App-link {
-  color: #61dafb;
+.loading_bar{
+  background-color: black;
+  height: 4px;
+  transition: width 1.5s ease;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.navbar_style{
+  box-sizing: border-box;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.nav_outer_div{
+  border: solid 1px #006fc9;
+  background-color: #ffffff;
+  display: flex;
+  flex-wrap: nowrap;
+  position: sticky;
+  top: 0;
+}
+
+.nav_profile_button{
+  width: 60px;
+  height: 60px;
+  border: none;
+  background-color: #ffffff;
+  border: solid 1px #0d6efd;
+  border-radius: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #0d6efd;
+  font-size: 30px;
+  position: fixed;
+  top: 20px;
+  right: 20px;
+}
+
+.profile_outer_div{
+  width: 25%;
+  height: 100vh;
+  overflow-y: scroll;
+  position: fixed;
+  top: 0;
+  right: 0;
+  z-index: 100;
+  transform: translateX(100%);
+  background-color: #ffffff;
+  transition: all 1s;
+  border: solid 1px #006fc9;
+}
+
+.profile_inner_div{
+  width: 100%;
+}
+
+.profile_cancel_button{
+  width: 50px;
+  background-color: #ffffff;
+  color: #006fc9;
+  font-size: 30px;
+  border: none;
+  border-left: solid 1px #0d6efd;
+}
+
+.profile_title_div{
+  border-bottom: solid 1px #006fc9;
+}
+
+.profile_logout_div{
+  width: 100%;
+  border-top: solid 1px #0d6efd;
+  padding: 16px 0;
+  z-index: 100;
+}
+
+.profile_image_div{
+  width: 200px;
+  height: 200px;
+  border: solid 1px #006fc9;
+  overflow: hidden;
+  margin: 50px auto 30px auto;
+  border-radius: 50%;
+}
+
+.profile_info{
+  font-size: 20px;
+  padding-left: 10%;
+  font-weight: 500;
+}
+
+@media screen and (min-width: 769px) and (max-width: 1024px){
+  .profile_outer_div{
+    width: 35%;
   }
-  to {
-    transform: rotate(360deg);
+}
+
+@media screen and (min-width: 426px) and (max-width: 768px){
+  .add_task_div{
+    width: 70%;
+  }
+  .title_main_div{
+    padding: 12px;
+  }
+  .profile_outer_div{
+    width: 45%;
+  }
+  .nav_profile_button{
+    width: 50px;
+    height: 50px;
+    font-size: 25px;
+    top: 12px;
+    right: 12px;
+  }
+}
+
+@media screen and (min-width: 320px) and (max-width: 425px){
+  .add_task_div{
+    width: 90%;
+  }
+  .title_main_div{
+    padding: 8px;
+  }
+  .profile_outer_div{
+    width: 80%;
+  }
+  .nav_profile_button{
+    width: 40px;
+    height: 40px;
+    font-size: 20px;
+    top: 10px;
+    right: 10px;
   }
 }
