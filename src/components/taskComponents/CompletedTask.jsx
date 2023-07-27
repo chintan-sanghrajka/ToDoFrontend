@@ -48,9 +48,13 @@ const CompletedTask = () => {
                         return <TaskComp key={index + 1} ele={element} no={index + 1} btnReq={false} />
                     })
                 }
-                {loading && <Spinner className='d-block mx-auto'></Spinner>}
+                {loading && <Spinner className='d-block mx-auto mb-4'></Spinner>}
                 {
-                    !loading && <Button className="btn btn-primary d-block mx-auto mb-5" onClick={loadHandler} disabled={pages === page || taskCount < limit}>{pages === page || taskCount < limit ? 'No more taks' : 'Load More'}</Button>
+                    // !loading && <Button className="btn btn-primary d-block mx-auto mb-5" onClick={loadHandler} disabled={pages === page || taskCount < limit}>{pages === page || taskCount < limit ? 'No more taks' : 'Load More'}</Button>
+                    !loading && <Button className="btn btn-primary mx-auto mb-5" onClick={loadHandler} disabled={pages === page || taskCount < limit} style={{ display: pages === page || taskCount < limit ? 'none' : 'block' }}>Load More</Button>
+                }
+                {
+                    !loading && (pages === page || taskCount < limit ? <h4 className='text-center mb-4'>No More Task</h4> : '')
                 }
             </Container>
         </>

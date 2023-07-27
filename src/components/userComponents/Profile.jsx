@@ -39,7 +39,8 @@ const Profile = () => {
             setProfile(res.data.profile)
             // console.log(res.data.profile)
             if (res.data.profile[0].avatar !== '') {
-                setAvatarUrl(`${BASE_URL}images/${res.data.profile[0].avatar}`);
+                setAvatarUrl(`${BASE_URL}uploads/${res.data.profile[0].avatar}`);
+                // console.log(`${BASE_URL}uploads/${res.data.profile[0].avatar}`)
             }
             else {
                 setAvatarUrl(defaultProfile)

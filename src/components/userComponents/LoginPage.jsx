@@ -15,14 +15,13 @@ const LoginPage = () => {
     const [noPassword, setNoPassword] = useState(false)
     const [invalidPassword, setInvalidPassword] = useState(false)
     const [loadingWidth, setLoadingWidth] = useState("0")
-    const [progress, setProgress] = useState(false)
+    const [progress, setProgress] = useState(true)
 
     const onChangeHandler = (e) => {
         const { name, value } = e.target
         setData({ ...data, [name]: value })
     }
     const submitHandler = () => {
-        setProgress(true)
         setNoUsername(false)
         setNoPassword(false)
         setInvalidUsername(false)

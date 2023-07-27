@@ -24,7 +24,7 @@ const SignupPage = () => {
         noSamePassword: false,
     }
     const [loadingWidth, setLoadingWidth] = useState("0")
-    const [progress, setProgress] = useState(false)
+    const [progress, setProgress] = useState(true)
 
     const reducer = (state, action) => {
         switch (action.type) {
@@ -126,7 +126,6 @@ const SignupPage = () => {
             }
             else {
                 setLoadingWidth("70%")
-                setProgress(true)
                 await axios.post(`${BASE_URL}add-user`, {
                     firstName: data.firstname,
                     lastName: data.lastname,

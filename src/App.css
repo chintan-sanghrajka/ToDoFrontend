@@ -40,7 +40,7 @@
 .loading_bar{
   background-color: black;
   height: 4px;
-  transition: width 1.5s ease;
+  transition: width 4s ease;
 }
 
 .navbar_style{
