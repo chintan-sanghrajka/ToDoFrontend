@@ -34,13 +34,10 @@ const Profile = () => {
     }, [userName])
 
     const getProfile = async () => {
-        // console.log(user._id)
         await axios.get(`${BASE_URL}get-profile?userId=${user._id}`).then((res) => {
             setProfile(res.data.profile)
-            // console.log(res.data.profile)
             if (res.data.profile[0].avatar !== '') {
                 setAvatarUrl(`${BASE_URL}uploads/${res.data.profile[0].avatar}`);
-                // console.log(`${BASE_URL}uploads/${res.data.profile[0].avatar}`)
             }
             else {
                 setAvatarUrl(defaultProfile)

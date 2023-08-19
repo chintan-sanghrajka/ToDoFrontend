@@ -163,24 +163,24 @@ const SignupPage = () => {
                 <div className='add_task_div mt-5'>
                     <Row>
                         <Col className='col-md-6 col-12'>
-                            <InputTags props={{ type: "text", name: "firstname", placeholder: "Chintan", heading: "First Name", changeHandler: onChangeHandler }} />
+                            <InputTags props={{ type: "text", name: "firstname", placeholder: "First Name", heading: "First Name", changeHandler: onChangeHandler }} />
                             {state.noFirstName && <p className='error_msg'>Please enter first name</p>}
                         </Col>
                         <Col className='col-md-6 col-12'>
-                            <InputTags props={{ type: "text", name: "lastname", placeholder: "Sanghrajka", heading: "Last Name", changeHandler: onChangeHandler }} />
+                            <InputTags props={{ type: "text", name: "lastname", placeholder: "Last name", heading: "Last Name", changeHandler: onChangeHandler }} />
                             {state.noLastName && <p className='error_msg'>Please enter last name</p>}
                         </Col>
                     </Row>
-                    <InputTags props={{ type: "text", name: "username", placeholder: "ChintanKS", heading: "Username", changeHandler: onChangeHandler }} />
+                    <InputTags props={{ type: "text", name: "username", placeholder: "Username", heading: "Username", changeHandler: onChangeHandler }} />
                     {state.noUserName && <p className='error_msg'>Please enter username</p>}
                     {state.existingUserName && <p className='error_msg'>Username already exists</p>}
                     <InputTags props={{ type: "text", name: "emailid", placeholder: "abc@gmail.com", heading: "Email ID", changeHandler: onChangeHandler }} />
                     {state.noEmailId && <p className='error_msg'>Please enter email id</p>}
                     {state.invalidEmailId && <p className='error_msg'>Please enter a valid email id</p>}
-                    <InputTags props={{ type: "password", name: "password", placeholder: "password", heading: "Password", changeHandler: onChangeHandler }} />
+                    <InputTags props={{ type: "password", name: "password", placeholder: "Password", heading: "Password", changeHandler: onChangeHandler }} />
                     {state.noPassword && <p className='error_msg'>Please enter password</p>}
                     {state.invalidPassword && <p className='error_msg'>Password should be more than 6 char and should contain 1 letter, number and special char</p>}
-                    <InputTags props={{ type: "password", name: "confirmPassword", placeholder: "confirm password", heading: "Confirm Password", changeHandler: onChangeHandler }} />
+                    <InputTags props={{ type: "password", name: "confirmPassword", placeholder: "Confirm Password", heading: "Confirm Password", changeHandler: onChangeHandler }} />
                     {state.noRePassword && <p className='error_msg'>Please re-enter password</p>}
                     {state.noSamePassword && <p className='error_msg'>Please enter same password</p>}
                     <div className='d-flex justify-content-between mt-4'>

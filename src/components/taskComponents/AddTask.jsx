@@ -33,7 +33,7 @@ const AddTask = () => {
             axios.post(`${BASE_URL}add-task`, {
                 task: data.task,
                 // author: data.author,
-                author: data.author === undefined ? "Chintan" : data.author,
+                author: data.author === undefined ? username : data.author,
                 date: createDate,
                 userId: _id,
             }).then((res) => { navigate(`/view-task`) }).catch(err => console.log(err))
@@ -48,7 +48,7 @@ const AddTask = () => {
                 <div className='add_task_div mt-5'>
                     <InputTags props={{ type: "text", name: "task", placeholder: "Use ToDo List", heading: "Task", changeHandler: onChangeHandler }} />
                     {taskValue && <p className='error_msg'>Please enter the task.</p>}
-                    <InputTags props={{ type: "text", name: "author", placeholder: "Chintan Sanghrajka", heading: "Assigned By", changeHandler: onChangeHandler }} />
+                    <InputTags props={{ type: "text", name: "author", placeholder: username, heading: "Assigned By", changeHandler: onChangeHandler }} />
                     <Button onClick={addTaskHandler} className="btn-primary d-block ms-auto mt-4" ><i className="bi bi-plus-square me-2"></i>Add Task</Button>
                 </div>
             </Container>

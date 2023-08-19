@@ -60,10 +60,10 @@ const LoginPage = () => {
             <Container >
                 <h2 className='my-4 ms-5'>Welcome to ToDo</h2>
                 <div className='add_task_div mt-5'>
-                    <InputTags props={{ type: "text", name: "username", placeholder: "ChintanKS", heading: "Username", changeHandler: onChangeHandler }} />
+                    <InputTags props={{ type: "text", name: "username", placeholder: "Username", heading: "Username", changeHandler: onChangeHandler }} />
                     {noUsername && <p className='error_msg'>Please enter username</p>}
                     {invalidUsername && <p className='error_msg'>Invalid Username</p>}
-                    <InputTags props={{ type: "password", name: "password", placeholder: "password", heading: "Password", changeHandler: onChangeHandler }} />
+                    <InputTags props={{ type: "password", name: "password", placeholder: "Password", heading: "Password", changeHandler: onChangeHandler }} />
                     {noPassword && <p className='error_msg'>Please enter password</p>}
                     {invalidPassword && <p className='error_msg'>Invalid Password</p>}
                     <div className='d-flex justify-content-between mt-4'>
